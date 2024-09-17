@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { type_second } from '@/functions/fonts';
 import Header from '@/components/header';
 import Providers from '@/components/providers';
+import Footer from '@/components/footer';
 
 export const metadata: Metadata = {
   title: 'Dogs',
@@ -17,8 +18,11 @@ export default function RootLayout({
     <html lang="pt-BR">
       <Providers>
         <body className={type_second.variable}>
-          <Header />
-          {children}
+          <div className="App">
+            <Header />
+            <main className="AppBody">{children}</main>
+            <Footer />
+          </div>
         </body>
       </Providers>
     </html>

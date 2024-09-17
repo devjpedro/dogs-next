@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { HeaderContainer, HeaderNav, LoginHeader, LogoHeader } from './styled';
 import Image from 'next/image';
 
