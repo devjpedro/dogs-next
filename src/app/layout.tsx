@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Providers from './components/Providers';
+import Providers from '../components/Providers';
 import { type_second } from '@/functions/fonts';
 
 export const metadata: Metadata = {
