@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Providers from './components/Providers';
+import { type_second } from '@/functions/fonts';
 
 export const metadata: Metadata = {
   title: 'Dogs',
@@ -14,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <Providers>
-        <body>{children}</body>
+        <body className={type_second.variable}>{children}</body>
       </Providers>
     </html>
   );

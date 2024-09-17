@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap');
-
   * {
     box-sizing: border-box;
   }
@@ -12,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0px;
     color: #333;
     --type-first: Helvetica, Arial, sans-serif;
-    --type-second: 'Spectral', Georgia;
+    --type-second: var(--type-second-spectral), Georgia;
     font-family: var(--type-first);
   }
 
