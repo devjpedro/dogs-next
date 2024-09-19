@@ -16,15 +16,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <Providers>
-        <body className={type_second.variable}>
+      <body className={type_second.variable}>
+        <Providers>
           <div className="App">
             <Header />
             <main className="AppBody">{children}</main>
             <Footer />
           </div>
-        </body>
-      </Providers>
+        </Providers>
+      </body>
     </html>
   );
 }
