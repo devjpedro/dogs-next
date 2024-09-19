@@ -9,7 +9,7 @@ export default async function login(state: {}, formData: FormData) {
   const password = formData.get('password') as string | null;
 
   try {
-    if (!username || !password) throw new Error('Preencha todos os dados');
+    if (!username || !password) throw new Error('Preencha todos os dados.');
 
     const { url } = TOKEN_POST();
 
@@ -18,7 +18,7 @@ export default async function login(state: {}, formData: FormData) {
       body: formData,
     });
 
-    if (!response.ok) throw new Error('Usuário ou senha inválidos');
+    if (!response.ok) throw new Error('Usuário ou senha inválidos.');
 
     const data = await response.json();
 
