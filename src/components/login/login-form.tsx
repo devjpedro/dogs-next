@@ -6,6 +6,8 @@ import Button from '../forms/button';
 import Input from '../forms/input';
 import ErrorMessage from '../helper/error-message';
 import React from 'react';
+import Link from 'next/link';
+import { CadastroContainer, CustomLink, FormContainer } from './styled';
 
 function FormButton() {
   const { pending } = useFormStatus();
@@ -30,12 +32,20 @@ export default function LoginForm() {
 
   return (
     <>
-      <form action={action}>
+      <FormContainer action={action}>
         <Input label="Usuário" type="text" name="username" />
         <Input label="Senha" type="password" name="password" />
         <ErrorMessage error={state.error} />
         <FormButton />
-      </form>
+      </FormContainer>
+      <CustomLink href="/login/perdeu">Perdeu a senha?</CustomLink>
+      <CadastroContainer>
+        <h2>Cadastre-se</h2>
+        <p>Ainda não possui conta? Cadastre-se no site.</p>
+        <Link href="/login/criar" className="button">
+          Cadastro
+        </Link>
+      </CadastroContainer>
     </>
   );
 }
