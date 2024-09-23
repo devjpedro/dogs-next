@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import useMedia from '@/hooks/useMedia';
 import FeedIcon from '@/icons/feed-icon';
@@ -14,6 +14,8 @@ import {
   NavContainer,
   NavMobile,
 } from './styled';
+import logout from '@/actions/logout';
+import { useUser } from '@/context/user-context';
 
 function getTitle(pathname: string) {
   switch (pathname) {
@@ -29,14 +31,15 @@ function getTitle(pathname: string) {
 }
 
 const ContaHeader = () => {
-  const mobile = useMedia('(max-width: 40rem)');
   const [mobileMenu, setMobileMenu] = React.useState(false);
 
-  const router = useRouter();
+  const { setUser } = useUser();
+  const mobile = useMedia('(max-width: 40rem)');
   const pathname = usePathname();
 
-  function handleLogout() {
-    router.replace('/login');
+  async function handleLogout() {
+    await logout();
+    setUser(null);
   }
 
   return (
