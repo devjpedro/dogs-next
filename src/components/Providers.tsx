@@ -1,16 +1,29 @@
 'use client';
 
+import { UserContextProvider } from '@/context/user-context';
 import StyledComponentsRegistry from '@/lib/registry';
 import { GlobalStyle } from '@/styles/global';
 import React, { type ReactNode } from 'react';
 
-export default function Providers({ children }: { children: ReactNode }) {
+type UserType = {
+  id: number;
+  nome: string;
+  username: string;
+  email: string;
+};
+
+export default function Providers({
+  children,
+  user,
+}: {
+  children: ReactNode;
+  user: UserType | null;
+}) {
   return (
     <>
-      <StyledComponentsRegistry>
-        {children}
-        <GlobalStyle />
-      </StyledComponentsRegistry>
+      <UserContextProvider user={user}>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </UserContextProvider>
     </>
   );
 }
