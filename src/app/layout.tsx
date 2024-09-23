@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
 import { type_second } from '@/functions/fonts';
 import Header from '@/components/header';
-import Providers from '@/components/providers';
 import Footer from '@/components/footer';
-import { UserContextProvider, useUser } from '@/context/user-context';
+import { UserContextProvider } from '@/context/user-context';
 import { GlobalStyle } from '@/styles/global';
 import StyledComponentsRegistry from '@/lib/registry';
 import getUser from '@/actions/get-user';
