@@ -62,3 +62,15 @@ export const Photo = styled.li`
     }
   }
 `;
+
+export const LoadingWrapper = styled.div`
+  display: flex;
+  height: 100px;
+  margin: 1rem auto;
+
+  p {
+    text-align: center;
+    margin: auto;
+    color: #888;
+  }
+`;
