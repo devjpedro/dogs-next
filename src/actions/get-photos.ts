@@ -21,24 +21,25 @@ type GetPhotosParams = {
   user?: 0 | string;
 };
 
-export default async function getPhotos({
-  page = 1,
-  total = 6,
-  user = 0,
-}: GetPhotosParams = {}) {
+export default async function getPhotos(
+  { page = 1, total = 6, user = 0 }: GetPhotosParams = {},
+  optionsFront?: RequestInit,
+) {
   try {
+    const options = optionsFront || {
+      next: {
+        revalidate: 10,
+        tags: ['photos'],
+      },
+    };
+
     const { url } = PHOTOS_GET({
       page,
       total,
       user,
     });
 
-    const response = await fetch(url, {
-      next: {
-        revalidate: 10,
-        tags: ['photos'],
-      },
-    });
+    const response = await fetch(url, options);
 
     if (!response.ok) throw new Error('Erro ao recuperar as fotos.');
 

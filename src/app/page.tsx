@@ -7,7 +7,7 @@ export default async function Home() {
 
   return (
     <section className="container mainContainer">
-      {!!data?.length ? <Feed photos={data} /> : <div>Não há nenhuma foto</div>}
+      {data?.length && <Feed photos={data} />}
     </section>
   );
 }
