@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+/* CONTA HEADER */
+
 export const HeaderContainer = styled.header`
   display: grid;
   grid-template-columns: 1fr auto;
@@ -133,5 +135,40 @@ export const NavMobile = styled.nav`
     opacity: 1;
     pointer-events: initial;
     z-index: 100;
+  }
+`;
+
+/* CONTA PHOTO POST */
+
+export const PhotoPostContainer = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 40rem) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+export const InputFile = styled.input`
+  margin-bottom: 1rem;
+`;
+
+interface PreviewFileProps {
+  $bgImage: string;
+}
+
+export const PreviewFile = styled.div<PreviewFileProps>`
+  border-radius: 1rem;
+  background-image: ${({ $bgImage }) => `url(${$bgImage})`};
+  background-size: cover;
+  background-position: center center;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 0px;
+    padding-bottom: 100%;
   }
 `;
