@@ -7,7 +7,7 @@ import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
 export default async function postPhoto(state: {}, formData: FormData) {
-  const token = cookies().get('token');
+  const token = cookies().get('token')?.value;
   const nome = formData.get('nome') as string | null;
   const peso = formData.get('peso') as string | null;
   const idade = formData.get('idade') as string | null;
