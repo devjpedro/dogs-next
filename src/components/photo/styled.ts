@@ -9,6 +9,15 @@ export const scaleUp = keyframes`
   }
 `;
 
+export const latir = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
 export const PhotoContainer = styled.div`
   margin: auto;
   height: 36rem;
@@ -119,5 +128,79 @@ export const DeleteButton = styled.button`
     background: white;
     box-shadow: 0 0 0 3px #eee;
     border-color: #333;
+  }
+`;
+
+/* PHOTO COMMENTS */
+export const CommentsContainer = styled.ul`
+  overflow-y: auto;
+  word-break: break-word;
+  padding: 0 2rem;
+
+  &.single {
+    padding: 0px;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+`;
+
+/* PHOTO COMMENTS FORM */
+
+export const FormContainer = styled.form`
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: stretch;
+  margin: 1rem;
+
+  &.single {
+    margin: 1rem 0;
+  }
+`;
+
+export const CustomTextarea = styled.textarea`
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  font-family: var(--type-first);
+  resize: none;
+  border: 1px solid #eee;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  background: #eee;
+  transition: 0.2s;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border-color: #fb1;
+    background: white;
+    box-shadow: 0 0 0 3px #fea;
+  }
+`;
+
+export const CustomButton = styled.button`
+  border: none;
+  cursor: pointer;
+  color: #333;
+  background: transparent;
+  font-size: 1rem;
+  padding: 0 1rem;
+  overflow: hidden;
+
+  &:focus,
+  &:hover {
+    outline: none;
+
+    svg path {
+      fill: #fea;
+      stroke: #fb1;
+    }
+
+    svg g {
+      animation: latir 0.6s infinite;
+    }
   }
 `;
