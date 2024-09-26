@@ -29,7 +29,13 @@ const PhotoContent = ({
   return (
     <PhotoContainer className={single ? 'single' : ''}>
       <ImageContainer className={single ? 'single' : ''}>
-        <Image src={photo.src} alt={photo.title} width={1000} height={1000} />
+        <Image
+          src={photo.src}
+          alt={photo.title}
+          width={1000}
+          height={1000}
+          priority
+        />
       </ImageContainer>
       <DetailsContainer className={single ? 'single' : ''}>
         <div>
