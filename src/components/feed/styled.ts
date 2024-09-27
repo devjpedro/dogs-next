@@ -74,3 +74,20 @@ export const LoadingWrapper = styled.div`
     color: #888;
   }
 `;
+
+/* MODAL FEED */
+export const ModalContainer = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  padding: 2rem 4rem;
+  display: flex;
+
+  @media (max-width: 40rem) {
+    padding: 2rem;
+  }
+`;
