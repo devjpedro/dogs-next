@@ -36,11 +36,12 @@ export const PhotoContainer = styled.div`
     height: auto;
   }
 
-  @media (max-width: 64rem) {
+  @media (max-width: 64rem), (max-height: 36rem) {
     height: auto;
     max-height: calc(100vh - 4rem);
     overflow-y: auto;
     grid-template-columns: minmax(20rem, 40rem);
+    grid-template-rows: repeat(4, auto);
   }
 `;
 
