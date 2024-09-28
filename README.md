@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dogs
 
-## Getting Started
+## Sobre o Projeto
 
-First, run the development server:
+Dogs é uma rede social dedicada exclusivamente aos apaixonados por cães. O objetivo é oferecer uma experiência simples e visualmente atraente, onde os usuários podem explorar e compartilhar fotos de diferentes pets, conectando-se com outros amantes de cachorros.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Funcionalidades
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Feed de Fotos**: Explore e compartilhe imagens encantadoras de cachorros. Descubra diversas raças e acompanhe as postagens de outros apaixonados por pets.
+- **Postar Fotos**: Publique facilmente novas fotos dos seus cachorros e mostre seu melhor amigo ao mundo, direto no seu perfil.
+- **Estatísticas**: Acompanhe o desempenho das suas fotos com dados detalhados, incluindo curtidas, comentários e visualizações.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Como Usar
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. Clonar repositório
+``git clone https://github.com/devjpedro/dogs-next.git``
 
-## Learn More
+2. Navegar até o diretório
+``cd dogs-next``
 
-To learn more about Next.js, take a look at the following resources:
+3. Instalar dependências
+ ``npm i``
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Subir projeto Local
+``npm run dev``
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+5. Acessar projeto
+``http://localhost:3000/``
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Você também pode visualizar o projeto online através do seguinte link:
+https://dogs-jp.vercel.app
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Tecnologias e Bibliotecas Usadas
+
+- **NextJS**: Um framework React para construção de interfaces otimizadas com renderização no servidor e geração de sites estáticos.
+- **TypeScript**: Um superconjunto de JavaScript que adiciona tipagem estática.
+- **Styled Components**: Uma biblioteca para estilizar componentes React.
+- **Victory**: Uma biblioteca React para criar gráficos e visualizações de dados personalizáveis.
+
