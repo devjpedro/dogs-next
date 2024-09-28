@@ -1,4 +1,4 @@
-# Dogs
+# Dogs 🐶
 
 ## Sobre o Projeto
 
