@@ -7,8 +7,9 @@ Dogs é uma rede social dedicada exclusivamente aos apaixonados por cães. O obj
 ## Funcionalidades
 
 - **Feed de Fotos**: Explore e compartilhe imagens encantadoras de cachorros. Descubra diversas raças e acompanhe as postagens de outros apaixonados por pets.
-- **Postar Fotos**: Publique facilmente novas fotos dos seus cachorros e mostre seu melhor amigo ao mundo, direto no seu perfil.
+- **Postagem de Fotos**: Publique facilmente novas fotos dos seus cachorros e mostre seu melhor amigo ao mundo, direto no seu perfil.
 - **Estatísticas**: Acompanhe o desempenho das suas postagens com dados detalhados e o total de acessos.
+- **Autenticação de Usuário**: Cadastro e login para personalizar a experiência do usuário.
 
 ## Como Usar
 
